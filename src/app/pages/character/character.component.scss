@@ -1,3 +1,18 @@
 .container {
   padding-bottom: 20px;
 }
+.navFilter {
+  width: 100%;
+  mat-form-field {
+    width: 100%;
+  }
+}
+
+table {
+  width: 100%;
+}
+
+mat-paginator {
+  margin-top: 20px;
+  background-color: transparent;
+}

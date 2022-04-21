@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, retry } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Character } from '../interfaces/character.interface';
 @Injectable({
@@ -11,7 +11,10 @@ export class CharacterService {
 
   constructor(private http: HttpClient) {}
 
-  public getCharacter(): Observable<Character> {
-    return this.http.get<Character>(`${this.API_URL}gryffindor`);
+  public getCharacter(house: any): Observable<any[]> {
+    const x = this.http
+      .get<Character[]>(`${this.API_URL}` + house)
+      .pipe(retry(1));
+    return x;
   }
 }

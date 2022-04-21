@@ -9,6 +9,7 @@
     />
   </mat-form-field>
 </div>
+
 <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
   <!-- Position Column -->
   <ng-container matColumnDef="position">
@@ -42,3 +43,10 @@
   [pageSizeOptions]="[5, 10, 20]"
   showFirstLastButtons
 ></mat-paginator>
+
+<div *ngFor="let potter of dataImport">
+  {{ potter.name }}
+  {{ potter.patronus }}
+  {{ potter.age }}
+  {{ potter.image }}
+</div>

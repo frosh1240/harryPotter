@@ -1,8 +1,28 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-4"><app-table></app-table></div>
+    <div class="col-md-4">
+      <div>
+        <form>
+          <h4>Select your Favorite Magic Houses</h4>
+          <mat-form-field appearance="fill">
+            <mat-label> Houses </mat-label>
+            <mat-select (selectionChange)="changeHouses($event.value)">
+              <mat-option
+                *ngFor="let houses of housesGet"
+                [value]="houses.house"
+              >
+                {{ houses.house }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </form>
+      </div>
+    </div>
     <div class="col-md-8">
-      <app-table></app-table>
+      <app-table
+        [HousesGet]="houseGetInput"
+        (send)="changeHouses($event)"
+      ></app-table>
     </div>
   </div>
 </div>

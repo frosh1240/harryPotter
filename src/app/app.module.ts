@@ -4,9 +4,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
+import { HttpClientModule } from '@angular/common/http';
+//
+//
 import { TabsModule } from './pages/tabs/tabs.module';
-//
-//
+import { CharacterModule } from './pages/character/character.module';
+import { TableModule } from './pages/character/table/table.module';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -15,6 +19,9 @@ import { TabsModule } from './pages/tabs/tabs.module';
     BrowserAnimationsModule,
     MaterialModule,
     TabsModule,
+    CharacterModule,
+    TableModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

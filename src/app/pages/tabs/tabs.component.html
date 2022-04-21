@@ -3,7 +3,9 @@
     ><mat-icon>menu</mat-icon></span
   >
   &nbsp;&nbsp;
-  <a routerLink="/"><span>Home</span></a>
+  <a routerLink="/"
+    ><span><mat-icon>home</mat-icon></span></a
+  >
 
   <span class="fill-remaining-space"></span>
 </mat-toolbar>
@@ -11,8 +13,8 @@
 <mat-sidenav-container>
   <mat-sidenav #sideNav [(opened)]="opened" mode="side">
     <mat-nav-list>
-      <a mat-list-item routerLink="posts">
-        <mat-icon class="mat-18">book</mat-icon>Post
+      <a mat-list-item routerLink="character">
+        <mat-icon class="mat-18">face</mat-icon>&nbsp;Character
       </a>
     </mat-nav-list>
 

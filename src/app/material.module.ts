@@ -19,7 +19,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
-
+import { MatGridListModule } from '@angular/material/grid-list';
 const moduleAngular = [
   MatCardModule,
   MatButtonModule,
@@ -38,6 +38,7 @@ const moduleAngular = [
   MatSortModule,
   MatDialogModule,
   MatSelectModule,
+  MatGridListModule,
 ];
 
 @NgModule({

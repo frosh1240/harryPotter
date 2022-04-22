@@ -14,6 +14,16 @@ const routes: Routes = [
             (m) => m.CharacterModule
           ),
       },
+      {
+        path: 'staff',
+        loadChildren: () =>
+          import('../staff/staff.module').then((m) => m.StaffModule),
+      },
+      {
+        path: 'students',
+        loadChildren: () =>
+          import('../students/students.module').then((m) => m.StudentsModule),
+      },
     ],
   },
 ];

@@ -22,6 +22,16 @@ const routes: Routes = [
         (m) => m.CharacterModule
       ),
   },
+  {
+    path: 'staff',
+    loadChildren: () =>
+      import('./pages/staff/staff.module').then((m) => m.StaffModule),
+  },
+  {
+    path: 'students',
+    loadChildren: () =>
+      import('./pages/students/students.module').then((m) => m.StudentsModule),
+  },
 ];
 
 @NgModule({

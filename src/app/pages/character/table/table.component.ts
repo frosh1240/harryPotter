@@ -10,7 +10,7 @@ import {
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { CharacterService } from 'src/app/services/character.service';
+import { apiService } from 'src/app/services/api.service';
 import { Character } from 'src/app/interfaces/character.interface';
 @Component({
   selector: 'app-table',
@@ -18,7 +18,7 @@ import { Character } from 'src/app/interfaces/character.interface';
   styleUrls: ['./table.component.scss'],
 })
 export class TableComponent implements OnInit {
-  displayedColumns: string[] = ['titlePost', 'tagPost'];
+  displayedColumns: string[] = ['name', 'patronus', 'image'];
   dataSource = new MatTableDataSource();
   dataImport: any = [];
   id: any;
@@ -28,7 +28,7 @@ export class TableComponent implements OnInit {
   @Input() HousesGet!: string;
   @Output() send = new EventEmitter<string>();
 
-  constructor(private characterSv: CharacterService) {}
+  constructor(private characterSv: apiService) {}
 
   ngAfterViewInit(): void {
     this.dataSource.paginator = this.paginator;
@@ -43,9 +43,9 @@ export class TableComponent implements OnInit {
 
   getHouse(getH: any): void {
     console.log(getH);
-    this.characterSv.getCharacter(getH).subscribe((data: object) => {
+    this.characterSv.getCharacter(getH).subscribe((data) => {
       this.dataImport = data;
-
+      this.dataSource.data = data;
       console.log(this.dataImport);
     });
   }

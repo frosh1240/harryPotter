@@ -1,9 +1,7 @@
 .container {
-  padding-bottom: 20px;
-  margin-top: 50px;
-
   .navFilter {
     width: 100%;
+    margin-top: 20px;
     mat-form-field {
       width: 100%;
     }
@@ -16,13 +14,5 @@
   mat-paginator {
     margin-top: 20px;
     background-color: transparent;
-  }
-
-  mat-form-field {
-    width: 100%;
-  }
-
-  h4 {
-    font-size: 1.2rem;
   }
 }

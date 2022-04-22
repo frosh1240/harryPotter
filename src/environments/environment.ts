@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   charapter: {
-    url: 'https://hp-api.herokuapp.com/api/characters/house/',
+    url: 'https://hp-api.herokuapp.com/api/characters/',
   },
 };
 

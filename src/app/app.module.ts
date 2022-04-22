@@ -12,6 +12,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TabsModule } from './pages/tabs/tabs.module';
 import { CharacterModule } from './pages/character/character.module';
 import { TableModule } from './pages/character/table/table.module';
+import { StaffModule } from './pages/staff/staff.module';
+import { StudentsModule } from './pages/students/students.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -26,6 +28,8 @@ import { TableModule } from './pages/character/table/table.module';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    StaffModule,
+    StudentsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

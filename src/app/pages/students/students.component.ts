@@ -11,6 +11,7 @@ import { apiService } from 'src/app/services/api.service';
 })
 export class StudentsComponent implements OnInit {
   displayedColumns: string[] = ['name', 'patronus', 'image'];
+  data = new MatTableDataSource([]);
   dataSource = new MatTableDataSource();
   @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort!: MatSort;

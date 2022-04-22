@@ -14,6 +14,7 @@ import { CharacterModule } from './pages/character/character.module';
 import { TableModule } from './pages/character/table/table.module';
 import { StaffModule } from './pages/staff/staff.module';
 import { StudentsModule } from './pages/students/students.module';
+import { AddModule } from './pages/students/add/add.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -30,6 +31,7 @@ import { StudentsModule } from './pages/students/students.module';
     ReactiveFormsModule,
     StaffModule,
     StudentsModule,
+    AddModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

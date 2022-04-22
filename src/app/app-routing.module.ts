@@ -1,8 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { CharacterComponent } from './pages/character/character.component';
-import { TabsComponent } from './pages/tabs/tabs.component';
 
 const routes: Routes = [
   {
@@ -12,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'tabs',
+    redirectTo: 'tabs/students',
     pathMatch: 'full',
   },
   {
@@ -31,6 +28,11 @@ const routes: Routes = [
     path: 'students',
     loadChildren: () =>
       import('./pages/students/students.module').then((m) => m.StudentsModule),
+  },
+  {
+    path: 'add',
+    loadChildren: () =>
+      import('./pages/students/add/add.module').then((m) => m.AddModule),
   },
 ];
 
